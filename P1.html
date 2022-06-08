@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p></p>
+</body>
+</html>
+
+<script>
+localStorage.setItem("student-1","Musavvir","")
+localStorage.setItem("student-2","sam")
+localStorage.setItem("student-1","tom")
+// whatever the value we update at the last that will be visible in the application option
+
+localStorage.setItem("student-1 -mobile",98798765444)
+
+// local storage will accept both numbers and string both if you make doubel quate on the number above we will get the same result
+
+// how we can show the name p tag
+
+// when we want to access something which is not in the localstorage it will show null or undefine
+
+
+let name=localStorage.getItem("student-1");
+document.querySelector("p").innerText=name;
+</script>

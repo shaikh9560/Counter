@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1></h1>
+    <button>Increment</button>
+    <button>Decrement</button>
+</body>
+</html>
+
+
+<script>
+let counter;
+
+ // we will use if condition because if we remove localcounter frm app it will shw null
+ if(localStorage.getItem("localCounter")==null){
+       counter=0;
+   }else{
+       counter=localStorage.getItem("localCounter");
+   }
+
+// above 0 we will write take from the value only by getiem
+document.querySelector("h1").innerText=counter
+
+    document.querySelector("h1+button").addEventListener("click",inc)
+    document.querySelector("button+button").addEventListener
+    ("click",dec)
+
+  
+    function inc(){
+counter++
+document.querySelector("h1").innerText=counter
+localStorage.setItem("localCounter",counter);
+    }
+
+    function dec(){
+        counter--
+document.querySelector("h1").innerText=counter
+localStorage.setItem("localCounter",counter);
+    }
+</script>
